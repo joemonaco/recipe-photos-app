@@ -1,8 +1,8 @@
-"use client";
 import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { CldImage } from "next-cloudinary";
-import { useState } from "react";
+import Recipes from "../components/recipes";
+import { AddRecipeAlert } from "@/components/add-recipe-alert";
 
 export type UploadResult = {
   info: {
@@ -11,18 +11,10 @@ export type UploadResult = {
   event: "success";
 };
 
-export default function Home() {
-  const [imageId, setImageId] = useState("");
+export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col justify-between">
-      Hello
-      {/* <CldImage
-        width="960"
-        height="600"
-        src="cceyh4kypzhtxynme7si"
-        sizes="100vw"
-        alt="Description of my image"
-      /> */}
+      {/* <Recipes /> */}
     </main>
   );
 }
