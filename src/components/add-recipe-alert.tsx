@@ -37,7 +37,7 @@ export function AddRecipeAlert() {
           <div className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="image">Image</Label>
-              <UploadButton />
+              <div></div>
               {/* 
               <Input id="image" type="file" /> */}
             </div>

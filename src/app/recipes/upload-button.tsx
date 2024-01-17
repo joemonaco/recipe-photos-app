@@ -5,15 +5,23 @@ import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons/faUpload";
 import { useState } from "react";
-export default function UploadButton() {
-  const [imageId, setImageId] = useState("");
+export default function UploadButton({
+  imageCallback,
+}: {
+  imageCallback: any;
+}) {
+  //   const [imageId, setImageId] = useState("");
+
+  function returnImageID(imageId) {
+    imageCallback(imageId);
+  }
   return (
     <Button asChild>
       <div className="flex gap-2">
         <FontAwesomeIcon icon={faUpload} />
         <CldUploadButton
           onUpload={(result: UploadResult) => {
-            setImageId(result.info.public_id);
+            returnImageID(result.info.public_id);
           }}
           uploadPreset="lzdcmstw"
         />
