@@ -7,7 +7,7 @@ import { CardTitle, CardContent, Card } from "@/components/ui/card";
 import { CldImage } from "next-cloudinary";
 import { RecipeType } from "@/types/RecipeType";
 
-export function RecipeCard(recipe: RecipeType) {
+export function RecipeCard({ recipe }: { recipe: RecipeType }) {
   return (
     <Card>
       <CardContent className="flex flex-col items-center">

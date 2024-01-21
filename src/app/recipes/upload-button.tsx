@@ -15,6 +15,7 @@ export default function UploadButton({
   function returnImageID(imageId) {
     imageCallback(imageId);
   }
+
   return (
     <Button asChild>
       <div className="flex gap-2">

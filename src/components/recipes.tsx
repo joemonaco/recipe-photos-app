@@ -20,7 +20,7 @@ export default async function Recipes() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
       {recipes.map((recipe: RecipeType) => (
-        <RecipeCard key={recipe.image_id} {...recipe} />
+        <RecipeCard key={recipe.image_id} recipe={recipe} />
       ))}
     </div>
   );
